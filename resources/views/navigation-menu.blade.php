@@ -98,8 +98,12 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
+                            <x-dropdown-link href="{{ route('etudiant') }}">
+                                {{ __('Lien direct') }}
+                            </x-dropdown-link>
+
+                            <x-dropdown-link href="{{ route('etudiant.create') }}">
+                                {{ __('Lien via le controleur resourceful') }}
                             </x-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

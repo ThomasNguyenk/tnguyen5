@@ -18,10 +18,13 @@ Route::middleware([
         return view('pages/info-etudiant');
     })->name('info');
 });
+Route::get('/creationEtudiant', function() {
+    return view('pages/creation-etudiant');
+})->name('etudiant');
 
 Route::get('/info', function() {
     return view('pages/info-etudiant');
 })->name('info');
 
-route::resource('etudiant', 'App\Http\Controller\EtudiantController');
+Route::resource('etudiant', 'App\Http\Controllers\EtudiantController');
 

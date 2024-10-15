@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="mt-2 md:mt-0 md:col-span-2">
-                <form method="post" action="{{url('creationEtudiant')}}" enctype="multipart/form-data">
+                <form method="get" action="{{url('creationEtudiant')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-white sm:p-6">
@@ -28,6 +28,30 @@
                                 <div class="col-span-6 sm:col-span-4">
                                     <label for="email">Email:</label>
                                     <input type="text" class="form-control" name="email">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label for="telephone">Telephone:</label>
+                                    <input type="text" class="form-control" name="telephone">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label for="cv">CV:</label>
+                                    <input type="file" class="form-control" name="cv">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label for="date_entree">date_entree:</label>
+                                    <input type="date" class="form-control" name="date_entree">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label for="section">section:</label>
+                                <select name="section">
+                                    <option value="SLAM">SLAM</option>
+                                    <option value="SISR">SISR</option>
+                                    <!-- Ajoutez d'autres sections ici -->
+                                </select>
                                 </div>
                             </div>
                         </div>
